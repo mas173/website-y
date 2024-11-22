@@ -298,6 +298,7 @@ padding-bottom: 10px;
     text-decoration: none;
     color: black;
     transition: .5s ease;
+    padding: 10px;
 }
 .footermenu a :hover{
     width: 80px;
