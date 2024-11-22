@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    /* General styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    /* Dashboard toggle checkbox (hidden) */
+    #dashboard-toggle {
+      display: none;
+    }
+
+    /* Dashboard toggle button */
+    .dashboard-icon {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      width: 40px;
+      height: 40px;
+      background-color:  #015868;
+      color: yellow;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      border: .5px solid yellow;
+    }
+
+    /* Dashboard panel */
+    .dashboard {
+      position: fixed;
+      top: 0;
+      left: -250px; /* Initially hidden */
+      width: 250px;
+      height: 100%;
+      backdrop-filter: blur(5px);
+      background-color: white .3;
+      
+
+      
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+      overflow-y: auto;
+      transition: left 0.3s ease;
+      z-index: 999;
+    }
+
+    /* Show the dashboard when checkbox is checked */
+    #dashboard-toggle:checked ~ .dashboard {
+      left: 0; /* Slide into view */
+    }
+
+    /* Dashboard header */
+    .dashboard-header {
+      padding: 15px;
+      background-color: #015868;
+      color: white;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      position: relative;
+    }
+
+    /* Close button */
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 25px;
+      height: 25px;
+      background-color: white;
+      color: #007bff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* Hide dashboard when close button is clicked */
+    #dashboard-toggle:checked ~ .dashboard .close-btn {
+      display: none;
+    }
+
+    /* Dashboard content */
+    .dashboard-content {
+      padding-top: 20px;
+      
+    
+      
+    }
+
+    .dashboard-content a {
+      display: block;
+      margin: 10px 0;
+      text-decoration: none;
+      color:black;
+      font-weight: 600;
+      width: 100%;
+      height: 30px;
+      font-size: 20px;
+      
+     
+      display: flex;
+      align-items: center;
+      border-bottom: 2px solid black;
+
+    }
+
+    /* Content of the page */
+    
+  </style>
+</head>
+<body>
+
+  <!-- Hidden checkbox for toggling -->
+  <input type="checkbox" id="dashboard-toggle">
+
+  <!-- Dashboard Icon -->
+  <label for="dashboard-toggle" class="dashboard-icon">☰</label>
+
+  <!-- Dashboard -->
+  <div class="dashboard">
+    <div class="dashboard-header">
+      Dashboard
+      <label for="dashboard-toggle" class="close-btn">×</label>
+    </div>
+    <div class="dashboard-content">
+      <a href="index.html">Home</a>
+      <a href="#about">About</a>
+      <a href="blogs.html">Blogs</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+   <div class="heading">
+    <div class="name"><h1>Vicky Raj</h1></div>
+    <div class="social">
+        <a href="https://www.instagram.com/vicky_razz_898/profilecard/?igsh=MTB3NnlxbW8weDNoeA=="><div class="bx bxl-instagram-alt"></div></a>
+        <a href="https://www.facebook.com/profile.php?id=100016783128536"><div class="bx bxl-facebook-square"></div></a>
+        <a href="https://x.com/Masterv61703841?t=TY3P24LEyrelLIn69FlSnA&s=09"><div class="bx bxl-twitter"></div></a>
+        <a href="https://github.com/mas173"><div class="bx bxl-github"></div></a>
+
+    </div>
+    <div class="lowerhead">
+        <h2>Hey, I'm</h2>
+        <h1>Vicky Raj</h1>
+        <h3>Btech cse 1st year</h3>
+        
+    </div>
+    
+   </div>
+   <div class="photo">
+    <img src="mainpic.jpg" alt="png">
+   </div>
+   <div id="about" class="about">
+    <h1>About Me</h1>
+    <p> I am vicky raj, an 19 years old B.tech computer sscience student at </p> <h3>shershah college of engineering, sasaram</h3>
+     <p>I hail from vaishali district of bihar and have strong passion for technology particularly
+      in field of cyber security and web development.
+    </p>
+    
+   </div>
+   
+    <input type="checkbox" id="checking">
+
+    <div class="button">
+      
+      <label for="checking"  id="down-icon">know more</label>
+      
+    </div>
+    <div class="moreinfo">
+      <h2>Academics</h2>
+      <ul>
+      <li>
+      <h3>shershah college of engineering, sasaram</h3>
+      <p>(2024-present) persuing B.tech in computer science</p>
+    </li>
+    <li>
+     
+      <h3>RN college, hajipur</h3>
+      <p>completed 12th with 80% marks</p>
+    </li>
+<li>
+  <h3>Delhi public school international, muzzafarpur</h3>
+  <p>completed 10th with 90% marks </p>
+</li>
+    </ul>
+    
+    <ul>
+      <li>
+      <h2>skills</h2>
+      <h3>HTML, CSS ,C </h3>
+    </li>
+      
+    </ul>
+      
+    </div>
+    
+    <div class="photogallery">
+      <h1>Frames of my life</h1>
+      <div class="piccard"><img src="uniform.jpg" alt="png">
+        <p>Date: September 14- 2024 <br>
+          Occasion: collage ready
+          
+        </p></div>
+        <div class="piccard"><img src="group.jpg" alt="png">
+          <p>Date: October 26- 2024 <br>
+            Occasion: induction program
+            
+          </p></div>
+      <div class="piccard"><img src="casual.jpg" alt="png">
+      <p>Date: August 19- 2024 <br>
+        Occasion: Raksha-bandhan
+        
+      </p></div>
+      
+      <div class="piccard"><img src="black.jpg" alt="png">
+        <p>Date: April 10- 2024 <br>
+          Occasion: Brother's marriage
+          
+        </p></div>
+      
+
+    </div>
+    <div id="contact" class="contact">
+      <h1>Contact</h1>
+      <h2>Email: rajv60701@gmail.com</h2>
+      <div class="form">
+        <form  name="netlify" netlify>
+         <p> 
+          Name:<label>
+          <input name="name" id="name" type="text" placeholder="Name">
+        </p>
+
+         <p>Email: 
+          <label  ><input name="email"  id="email" type="email" placeholder="Email"></label>
+         </p>
+         <p>Feedback:  <label ><input name="feedback" id="feed" type="text" placeholder="Feedback"></label></p>
+         <p> <button type="submit" id="button">submit</button></p>
+        </form>
+
+      </div>
+      <div class="socialmedia">
+        <a href="https://www.instagram.com/vicky_razz_898/profilecard/?igsh=MTB3NnlxbW8weDNoeA=="><div id="sm" class="bx bxl-instagram-alt"></div></a>
+        <a href="https://github.com/mas173"><div id="sm" class="bx bxl-github"></div></a>
+        <a href="https://www.facebook.com/profile.php?id=100016783128536"><div id="sm" class="bx bxl-facebook-square"></div></a>
+        <a href="https://x.com/Masterv61703841?t=TY3P24LEyrelLIn69FlSnA&s=09"><div id="sm" class="bx bxl-twitter"></div></a>
+       
+      </div>
+      <div class="footer">
+        <div class="footermenu">
+         <a href="index.html"> <h4>Home</h4></a>
+          <a href="blogs.html"><h4>Blogs</h4></a>
+          <a href="#about"><h4>About</h4></a>
+          <a href="blogs.html"><h4>Projects</h4></a>
+        </div>
+      </div>
+     <div class="top">
+      <a href="index.html"><div class="bx bxs-caret-up-circle"><p></p></div></a>
+     </div>
+
+    </div>
+    <div class="copyright">
+      <p>@2026 by vicky raj</p>
+      <p>powered and secured by netlify</p>
+
+
+    </div>
+     </div>
+
+</body>
+</html>
