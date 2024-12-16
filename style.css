@@ -156,17 +156,24 @@ background-color: #E9E3D5;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   text-align: center;
   margin-bottom: 20px;
+  
+  
 
+ 
 
 }
-.piccard :hover{
+.piccard img:hover{
     width: 75%;
-    transition: .4s ease;
+    
+    
+
+    
     border-radius: 10px;
 }
 .piccard img{
     width: 70%;
     height: auto;
+    transition: all ease-in-out 0.5s;
 }
 
 .piccard  p{
@@ -299,14 +306,15 @@ padding-bottom: 10px;
     color: black;
     transition: .5s ease;
     padding: 10px;
+    transition: all ease-in-out .4s;
 }
-.footermenu a :hover{
+.footermenu a:hover{
     width: 80px;
     height: auto;
     background-color: yellow;
     text-align: center;
     border-radius: 5px;
-    transition: .6s ease ;
+    
 }
 .copyright{
     text-align: center;
